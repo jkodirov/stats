@@ -1,5 +1,5 @@
-module github.com/jkodirov/stats
+module github.com/jkodirov/stats/v2
 
 go 1.17
 
-require github.com/jkodirov/bank v0.0.0-20210920034852-0bd72ea3da56 // indirect
+require github.com/jkodirov/bank/v2 v2.0.1
