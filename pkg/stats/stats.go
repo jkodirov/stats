@@ -4,12 +4,14 @@ import "github.com/jkodirov/bank/v2/pkg/types"
 
 func Avg(payments []types.Payment) types.Money {
 	sum := 0
+	count := 0
 	for _, payment := range payments {
 		if payment.Status != types.StatusFail {
 			sum += int(payment.Amount)
+			count += 1
 		}
 	}
-	avg := types.Money(sum / len(payments))
+	avg := types.Money(sum / count)
 	return avg
 }
 

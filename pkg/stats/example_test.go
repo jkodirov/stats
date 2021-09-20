@@ -10,19 +10,22 @@ func ExampleAvg() {
 		{
 			ID: 1,
 			Amount: 120,
+			Status: types.StatusFail,
 		},
 		{
 			ID: 2,
 			Amount: 100,
+			Status: types.StatusOk,
 		},
 		{
 			ID: 3,
 			Amount: 80,
+			Status: types.StatusOk,
 		},
 	}
 	fmt.Println(Avg(payments))
 	//Output:
-	// 100
+	// 90
 }
 
 func ExampleTotalInCategory() {
