@@ -27,3 +27,14 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 	}
 	return types.Money(sum)
 }
+
+func FilterByCategory(payments []types.Payment, category types.Category) []types.Payment {
+	var filtered []types.Payment
+
+	for _, payment := range payments {
+		if payment.Category == category {
+			filtered = append(filtered, payment)
+		}
+	}
+	return filtered
+}
